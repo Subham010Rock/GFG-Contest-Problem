@@ -24,3 +24,27 @@ class Solution
     }
 };
 ```
+
+## Problem No. 2-[Remove and Reverse](https://practice.geeksforgeeks.org/contest/gfg-hiring-mts-internship/problems/#)
+
+Solution--
+```
+class Solution:
+    def removeReverse(self, S): 
+        #code here
+        d={}
+        t=len(S)
+        for i in S:
+            d[i]=d.get(i,0)+1
+        i=0
+        while i<t:
+            if(d[S[i]]>1):
+                d[S[i]]-=1
+                S=S.replace(S[i],"",1)
+                S=S[::-1]
+                i=0
+                t-=1
+            else:
+                i+=1
+        return S
+```
