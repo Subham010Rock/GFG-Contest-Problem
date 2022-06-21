@@ -1,6 +1,6 @@
 # GFG-Contest-Problem
 
-## Problem No. 1-[Assign Tasks](https://practice.geeksforgeeks.org/contest/gfg-hiring-mts-internship/problems/#)
+## [Assign Tasks](https://practice.geeksforgeeks.org/contest/gfg-hiring-mts-internship/problems/#)
 
 Solution--
 ```
@@ -25,7 +25,7 @@ class Solution
 };
 ```
 
-## Problem No. 2-[Remove and Reverse](https://practice.geeksforgeeks.org/contest/gfg-hiring-mts-internship/problems/#)
+## [Remove and Reverse](https://practice.geeksforgeeks.org/contest/gfg-hiring-mts-internship/problems/#)
 
 Solution--
 ```
@@ -48,3 +48,43 @@ class Solution:
                 i+=1
         return S
 ```
+## [Maximum Frequency](https://practice.geeksforgeeks.org/contest/job-a-thon-10-hiring-challenge/problems/)
+
+Solution--
+```
+class Solution():
+    def solve(self, n, y, A):
+        #your code goes here
+        d={}
+        m=0;
+        for i in A:
+            d[i]=d.get(i,0)+1
+            m=max(m,d[i])
+        return m
+```
+## [Minimum Swaps](https://practice.geeksforgeeks.org/contest/job-a-thon-10-hiring-challenge/problems/)
+
+Solution--
+```
+class Solution {
+  public:
+    int count(int N,vector<vector<int>> A,vector<vector<int>> B) {
+        // code here
+        int different=0;
+        int sum_A=0;
+        int sum_B=0;
+        for( int i=0;i<N;i++){
+            for( int j=0;j<N;j++){
+                sum_A+=A[i][j];
+                sum_B+=B[i][j];
+                if(A[i][j]!=B[i][j]){
+                   different+=1;
+                }
+            }
+        }
+        if(sum_A!=sum_B)
+        return -1;
+        else
+        return different/2;
+    }   
+ ```
