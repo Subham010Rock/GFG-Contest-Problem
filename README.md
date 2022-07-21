@@ -88,3 +88,44 @@ class Solution {
         return different/2;
     }   
  ```
+## [Even subaaray sum](https://practice.geeksforgeeks.org/contest/job-a-thon-11-hiring-challenge/problems/)
+
+Solution--
+```
+class Solution {
+    public:
+    string solve(int N, vector<int> &A){
+        // code here
+        for(int i=0;i<N-1;i++){
+            if(A[i]+A[i+1]!=0)
+            return "NO";
+        }
+        return "YES";
+        
+    }
+};
+```
+## [Rectangles and Squares](https://practice.geeksforgeeks.org/contest/job-a-thon-11-hiring-challenge/problems/)
+
+Solution--
+```
+class Solution{
+  public:
+     int minimumMoves(int A, int B){
+
+        if(A==B)
+           return 1;
+        int res=0;
+        while(A!=0 and B!=0){
+            if(A>B){
+                res+=A/B;
+                A=A%B;
+            }
+            else{
+                res+=B/A;
+                B=B%A;
+            }
+        }
+        return res;
+    }
+ };
